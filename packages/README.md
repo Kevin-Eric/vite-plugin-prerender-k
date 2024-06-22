@@ -255,7 +255,7 @@ MIT
 [npm-url]: https://www.npmjs.com/package/vite-plugin-prerender-k
 [downloads-img]: https://img.shields.io/npm/dw/vite-plugin-prerender-k
 [downloads-url]: https://www.npmjs.com/package/vite-plugin-prerender-k
-[github-img]: https://img.shields.io/github/stars/Rudeus3Greyrat/vite-plugin-prerender-k
-[github-url]: https://github.com/Rudeus3Greyrat/vite-plugin-prerender-k
+[github-img]: https://img.shields.io/github/stars/Kevin-Eric/vite-plugin-prerender-k
+[github-url]: https://github.com/Kevin-Eric/vite-plugin-prerender-k
 [license-img]: https://img.shields.io/npm/l/vite-plugin-prerender-k
-[license-url]: https://github.com/Rudeus3Greyrat/vite-plugin-prerender-k
+[license-url]: https://github.com/Kevin-Eric/vite-plugin-prerender-k
