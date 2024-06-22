@@ -12,8 +12,7 @@
     "lint:pretty": "pretty-quick --staged",
     "lint:eslint": "eslint \"packages/**/*.{ts,tsx}\" --fix",
     "prepare": "husky install",
-    "preinstall": "npx only-allow pnpm",
-    "test": "vitest"
+    "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
@@ -35,8 +34,7 @@
     "tsup": "^8.1.0",
     "typescript": "^5.5.2",
     "unbuild": "^2.0.0",
-    "vite": "^5.3.1",
-    "vitest": "^1.6.0"
+    "vite": "^5.3.1"
   },
   "lint-staged": {
     "*": [
