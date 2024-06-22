@@ -20,7 +20,7 @@
     "@commitlint/config-conventional": "^19.2.2",
     "@types/html-minifier-terser": "^7.0.2",
     "@types/jsdom": "^21.1.7",
-    "@types/node": "^20.14.7",
+    "@types/node": "^20.14.8",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
     "@typescript-eslint/parser": "^7.13.1",
     "commitizen": "^4.3.0",
