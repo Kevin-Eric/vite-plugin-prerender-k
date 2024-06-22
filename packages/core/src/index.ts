@@ -5,10 +5,10 @@ import { VitePluginPrerender } from './types'
 import fs from 'fs'
 import chalk from 'chalk'
 
-const Prerenderer = require('@prerenderer/prerenderer')
-const PuppeteerRenderer = require('@prerenderer/renderer-puppeteer')
-const { minify } = require('html-minifier')
-const mkdirp = require('mkdirp')
+import Prerenderer from '@prerenderer/prerenderer'
+import PuppeteerRenderer from '@prerenderer/renderer-puppeteer'
+import { minify } from 'html-minifier'
+import mkdirp from 'mkdirp'
 const debug = Debug.debug('vite-plugin-prerender')
 
 const compilerFS = fs
