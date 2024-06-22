@@ -1,4 +1,4 @@
-# vite-plugin-prerender
+# vite-plugin-prerender-k
 
 [![npm][npm-img]][npm-url] [![downloads][downloads-img]][downloads-url] [![github][github-img]][github-url] [![license][license-img]][license-url]
 
@@ -17,19 +17,19 @@ It is inspired by [prerender-spa-plugin](https://github.com/chrisvfritz/prerende
 **vite version:** >=2.0.0
 
 ```
-yarn add vite-plugin-prerender -D
+yarn add vite-plugin-prerender-k -D
 ```
 
 or
 
 ```
-npm i vite-plugin-prerender -D
+npm i vite-plugin-prerender-k -D
 ```
 
 ## Basic Usage (`vite.config.js`)
 
 ```ts
-import vitePrerender from 'vite-plugin-prerender'
+import vitePrerender from 'vite-plugin-prerender-k'
 import path from 'path'
 
 export default () => {
@@ -49,7 +49,7 @@ export default () => {
 ## Advanced Usage (`vite.config.js`)
 
 ```javascript
-import vitePrerender from 'vite-plugin-prerender'
+import vitePrerender from 'vite-plugin-prerender-k'
 import path from 'path'
 
 const Renderer = vitePrerender.PuppeteerRenderer
@@ -251,11 +251,11 @@ postProcess(context) {
 
 MIT
 
-[npm-img]: https://img.shields.io/npm/v/vite-plugin-prerender.svg
-[npm-url]: https://www.npmjs.com/package/vite-plugin-prerender
-[downloads-img]: https://img.shields.io/npm/dw/vite-plugin-prerender
-[downloads-url]: https://www.npmjs.com/package/vite-plugin-prerender
-[github-img]: https://img.shields.io/github/stars/Rudeus3Greyrat/vite-plugin-prerender
-[github-url]: https://github.com/Rudeus3Greyrat/vite-plugin-prerender
-[license-img]: https://img.shields.io/npm/l/vite-plugin-prerender
-[license-url]: https://github.com/Rudeus3Greyrat/vite-plugin-prerender
+[npm-img]: https://img.shields.io/npm/v/vite-plugin-prerender-k.svg
+[npm-url]: https://www.npmjs.com/package/vite-plugin-prerender-k
+[downloads-img]: https://img.shields.io/npm/dw/vite-plugin-prerender-k
+[downloads-url]: https://www.npmjs.com/package/vite-plugin-prerender-k
+[github-img]: https://img.shields.io/github/stars/Kevin-Eric/vite-plugin-prerender-k
+[github-url]: https://github.com/Kevin-Eric/vite-plugin-prerender-k
+[license-img]: https://img.shields.io/npm/l/vite-plugin-prerender-k
+[license-url]: https://github.com/Kevin-Eric/vite-plugin-prerender-k

@@ -55,7 +55,7 @@ const initOptions = (...args) => {
     // Backwards-compatibility with v2
   } else {
     console.warn(
-      "[vite-plugin-prerender] You appear to be using the v2 argument-based configuration options. It's recommended that you migrate to the clearer object-based configuration system.\nCheck the documentation for more information.",
+      "[vite-plugin-prerender-k] You appear to be using the v2 argument-based configuration options. It's recommended that you migrate to the clearer object-based configuration system.\nCheck the documentation for more information.",
     )
     let staticDir, routes
 
@@ -72,7 +72,7 @@ const initOptions = (...args) => {
   // Backwards compatibility with v2.
   if (_options.captureAfterDocumentEvent) {
     console.warn(
-      '[vite-plugin-prerender] captureAfterDocumentEvent has been renamed to renderAfterDocumentEvent and should be moved to the renderer options.',
+      '[vite-plugin-prerender-k] captureAfterDocumentEvent has been renamed to renderAfterDocumentEvent and should be moved to the renderer options.',
     )
     rendererOptions.renderAfterDocumentEvent =
       _options.captureAfterDocumentEvent
@@ -80,7 +80,7 @@ const initOptions = (...args) => {
 
   if (_options.captureAfterElementExists) {
     console.warn(
-      '[vite-plugin-prerender] captureAfterElementExists has been renamed to renderAfterElementExists and should be moved to the renderer options.',
+      '[vite-plugin-prerender-k] captureAfterElementExists has been renamed to renderAfterElementExists and should be moved to the renderer options.',
     )
     rendererOptions.renderAfterElementExists =
       _options.captureAfterElementExists
@@ -88,7 +88,7 @@ const initOptions = (...args) => {
 
   if (_options.captureAfterTime) {
     console.warn(
-      '[vite-plugin-prerender] captureAfterTime has been renamed to renderAfterTime and should be moved to the renderer options.',
+      '[vite-plugin-prerender-k] captureAfterTime has been renamed to renderAfterTime and should be moved to the renderer options.',
     )
     rendererOptions.renderAfterTime = _options.captureAfterTime
   }
@@ -102,7 +102,7 @@ const initOptions = (...args) => {
 
   if (_options.postProcessHtml) {
     console.warn(
-      '[vite-plugin-prerender] postProcessHtml should be migrated to postProcess! Consult the documentation for more information.',
+      '[vite-plugin-prerender-k] postProcessHtml should be migrated to postProcess! Consult the documentation for more information.',
     )
   }
 
@@ -116,7 +116,7 @@ const emitRendered = (options) => {
     .then(() => {
       console.log(
         chalk.cyan(
-          `[vite-plugin-prerender] Rendering routes [${chalk.green(
+          `[vite-plugin-prerender-k] Rendering routes [${chalk.green(
             `${options.routes.join(', ')}`,
           )}] with puppeteer...`,
         ),
@@ -127,13 +127,13 @@ const emitRendered = (options) => {
     .then((renderedRoutes) => {
       console.log(
         chalk.green(
-          `[vite-plugin-prerender] All routes rendered successfully!`,
+          `[vite-plugin-prerender-k] All routes rendered successfully!`,
         ),
       )
       if (options.postProcessHtml) {
         console.log(
           chalk.cyan(
-            `[vite-plugin-prerender] Postprocessing rendered html files...`,
+            `[vite-plugin-prerender-k] Postprocessing rendered html files...`,
           ),
         )
         return renderedRoutes.map((renderedRoute) => {
@@ -152,7 +152,7 @@ const emitRendered = (options) => {
       if (options.postProcess) {
         console.log(
           chalk.cyan(
-            `[vite-plugin-prerender] Postprocessing rendered html files...`,
+            `[vite-plugin-prerender-k] Postprocessing rendered html files...`,
           ),
         )
         return Promise.all(
@@ -169,7 +169,7 @@ const emitRendered = (options) => {
       const isValid = renderedRoutes.every((r) => typeof r === 'object')
       if (!isValid) {
         throw new Error(
-          '[vite-plugin-prerender] Rendered routes are empty, did you forget to return the `context` object in postProcess?',
+          '[vite-plugin-prerender-k] Rendered routes are empty, did you forget to return the `context` object in postProcess?',
         )
       }
 
@@ -180,7 +180,9 @@ const emitRendered = (options) => {
       if (!options.minify) return renderedRoutes
 
       console.log(
-        chalk.cyan(`[vite-plugin-prerender] minifying rendered html files...`),
+        chalk.cyan(
+          `[vite-plugin-prerender-k] minifying rendered html files...`,
+        ),
       )
 
       renderedRoutes.forEach((route) => {
@@ -206,7 +208,9 @@ const emitRendered = (options) => {
     // Create dirs and write prerendered files.
     .then((processedRoutes) => {
       console.log(
-        chalk.cyan(`[vite-plugin-prerender] Generating rendered html files...`),
+        chalk.cyan(
+          `[vite-plugin-prerender-k] Generating rendered html files...`,
+        ),
       )
       const promises = Promise.all(
         processedRoutes.map((processedRoute) => {
@@ -219,7 +223,7 @@ const emitRendered = (options) => {
                   (err) => {
                     if (err)
                       reject(
-                        `[vite-plugin-prerender] Unable to write rendered route to file "${processedRoute.outputPath}" \n ${err}.`,
+                        `[vite-plugin-prerender-k] Unable to write rendered route to file "${processedRoute.outputPath}" \n ${err}.`,
                       )
                     else {
                       // @ts-ignore
@@ -231,7 +235,7 @@ const emitRendered = (options) => {
             })
             .catch((err) => {
               if (typeof err === 'string') {
-                err = `[vite-plugin-prerender] Unable to create directory ${path.dirname(
+                err = `[vite-plugin-prerender-k] Unable to create directory ${path.dirname(
                   processedRoute.outputPath,
                 )} for route ${processedRoute.route}. \n ${err}`
               }
@@ -245,11 +249,11 @@ const emitRendered = (options) => {
     })
     .then((r) => {
       PrerendererInstance.destroy()
-      console.log(chalk.green(`[vite-plugin-prerender] All done`))
+      console.log(chalk.green(`[vite-plugin-prerender-k] All done`))
     })
     .catch((err) => {
       PrerendererInstance.destroy()
-      const msg = '[vite-plugin-prerender] Unable to prerender all routes!'
+      const msg = '[vite-plugin-prerender-k] Unable to prerender all routes!'
       console.error(msg)
     })
 }
