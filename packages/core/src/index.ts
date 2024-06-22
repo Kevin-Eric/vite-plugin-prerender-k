@@ -9,7 +9,7 @@ import Prerenderer from '@prerenderer/prerenderer'
 import PuppeteerRenderer from '@prerenderer/renderer-puppeteer'
 import { minify } from 'html-minifier'
 import mkdirp from 'mkdirp'
-const debug = Debug.debug('vite-plugin-prerender')
+const debug = Debug.debug('vite-plugin-prerender-k')
 
 const compilerFS = fs
 
