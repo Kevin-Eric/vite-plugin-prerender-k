@@ -10,6 +10,10 @@ It is inspired by [prerender-spa-plugin](https://github.com/chrisvfritz/prerende
 >
 > ✅ **Flexible customised configuration**
 
+## updates
+
+Fixed warning issue in vite5
+
 ## Install (yarn or npm)
 
 **node version:** >=12.0.0
