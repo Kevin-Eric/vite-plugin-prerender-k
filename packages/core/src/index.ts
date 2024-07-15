@@ -255,6 +255,8 @@ const emitRendered = (options) => {
       PrerendererInstance.destroy()
       const msg = '[vite-plugin-prerender-k] Unable to prerender all routes!'
       console.error(msg)
+
+      throw err
     })
 }
 
