@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-prerender-k",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "type": "module",
   "description": "Flexible, framework-agnostic static site generation for sites and SPAs built with vite.",
   "main": "dist/index.cjs",
